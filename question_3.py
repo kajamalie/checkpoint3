@@ -9,6 +9,8 @@
 #using the key ‘score’
 
 Jordan_belfort = {'calls': 178, 'meetings':17,  'sales':6}
+kaja_end = {'calls': 140, 'meetings':22,  'sales': 9}
+
 
 def rank_sale(dic):
     bonus = {'points': 0}
@@ -28,8 +30,44 @@ def rank_sale(dic):
                 bonus['points'] = (bonus['points']) + dic['sales'] * 100
                 if dic['sales'] > 5:
                     bonus['points'] = (bonus['points']) + 100
+    
                     
             
     print(bonus) 
     
+    
+#%%
+    
+   #levert etter checkpoint var ferdig!!  
+# Ny verson som inkluderer rank i samme dictionary 
+    
+Jordan_belfort = {'calls': 178, 'meetings':17,  'sales':6}
+kaja_end = {'calls': 140, 'meetings':22,  'sales': 9}
+
+
+def rank_sale(dic):
+    dic['rank'] = 0
+    for calls in dic:
+        dic['rank'] = + dic['calls'] * 10
+        if dic['calls'] > 150:
+            dic['rank'] = (dic['rank']) + 100
+        else:
+            pass
+        for meetings in dic:
+            dic['rank'] = (dic['rank']) + dic['meetings'] * 30
+            if dic['meetings'] > 20:
+                dic['rank'] = (dic['rank']) + 100
+            else:
+                pass
+            for sales in dic:
+                dic['rank'] = (dic['rank']) + dic['sales'] * 100
+                if dic['sales'] > 5:
+                    dic['rank'] = (dic['rank']) + 100
+                else:
+                    pass
+    
+                    
+            
+    print(dic) 
+    print(dic['rank'])
   
