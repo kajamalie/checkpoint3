@@ -27,5 +27,25 @@ def low_taxes(customers, salary, taxes):
         
     print(low_taxes)
     
+
+
+#%%
+
+#levert etter checkpoint tid er over (inkludert at personen må tjene mer enn 555000): 
+def low_taxes(customers, salary, taxes):
+    low_taxes = []
+    for i in range(0, len(customers)):
+        if salary[i] > 555000:
+            if taxes[i] / salary[i] < 0.3:
+                low_taxes.append(customers[i])
+            else: 
+                pass
+        else:
+            pass
+        
+    print(low_taxes)
+    
+    
+    
     
     
