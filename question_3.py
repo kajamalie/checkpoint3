@@ -42,7 +42,7 @@ def rank_sale(dic):
 # Ny verson som inkluderer rank i samme dictionary 
     
 Jordan_belfort = {'calls': 178, 'meetings':17,  'sales':6}
-kaja_end = {'calls': 140, 'meetings':22,  'sales': 9}
+kaja_end = {'calls': 151, 'meetings':22,  'sales': 9}
 
 
 def rank_sale(dic):
@@ -65,9 +65,86 @@ def rank_sale(dic):
                     dic['rank'] = (dic['rank']) + 100
                 else:
                     pass
+ print(dic) 
+ print(dic['rank'])
+    
+#%%
+    
+
+def rank_sale(dic):
+    
+    dic['rank'] = 0
+    
+    rank_calls = + dic['calls'] * 10
+    if dic['calls'] > 150:
+        rank_calls = (dic['rank']) + 100
+    
+
+
+    rank_meetings = (dic['rank']) + dic['meetings'] * 30
+    if dic['meetings'] > 20:
+        rank_meetings = (dic['rank']) + 100
+    
+
+    rank_sales = (dic['rank']) + dic['sales'] * 100
+    if dic['sales'] > 5:
+        rank_sales = (dic['rank']) + 100
+    
+    
+    dic['rank'] = rank_calls + rank_meetings + rank_sales
+    return(dic['rank'])
+
+
     
                     
-            
-    print(dic) 
-    print(dic['rank'])
-  
+       
+print(dic) 
+print(dic['rank'])
+
+#%%
+
+jordan_belfort = {'calls': 178, 'meetings':17,  'sales':6}
+CALLS_M = 10
+MEETINGS_M = 30
+SALES_M = 100
+BONUS = 100
+score = 0
+score = score + jordan_belfort['calls']*CALLS_M
+score = score + jordan_belfort['meetings']*MEETINGS_M
+score = score + jordan_belfort['sales']*SALES_M
+if jordan_belfort['calls']>150:
+    score = score + BONUS
+if jordan_belfort['meetings']>20:
+    score = score + BONUS
+if jordan_belfort['sales']>5:
+    score = score + BONUS
+jordan_belfort['score'] = score
+
+#%%
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
