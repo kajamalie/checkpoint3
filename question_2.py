@@ -19,6 +19,23 @@ def to_camel_case(text):
         elif(text[i-1] != ' '):
             text1 += text[i]
     print(text1)
-        
     
+
+#%% fra Kristoffer
+
+def to_camel_case(text):
+    camel_text =' '
+    text_list = text.split(' ') #[word1, word1, ... wordn]
+    for word in text_list: #word = 'word1'
+        camel_text = camel_text + word[0].upper()+word[1:].lower()
+    return(camel_text)
+
+#%%
+    def to_camel_case2(text):
+        text_t = text.title()
+        return(text_t.replacer(' ', ''))
+#%%
+
+def to_camel_case3(text):
+    camel_text =''
     
